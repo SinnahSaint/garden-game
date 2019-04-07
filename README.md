@@ -1,6 +1,6 @@
 A simple gardening game.
 
-Have the blueprint in game.rb
+Have the blueprint in game_blueprint.rb
 
 Commands you can use when running it:
   
@@ -22,3 +22,6 @@ Commands you can use when running it:
   tree.collect            
   :   You can collect 96 fruits.
   
+
+
+Tried to do a working gardening game from the blueprint, but can't sort it out yet the repeatedness.
