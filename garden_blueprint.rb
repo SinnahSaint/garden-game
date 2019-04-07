@@ -7,14 +7,16 @@ attr_accessor :name, :count, :water, :fruits, :collect
     @water = 0
     @fruits = 0
     @collect = 0
-
-    
   end
 
   def plant name
-    puts "You just planted an #{name} tree. By watering it, you will get fruits to collect them."
+    puts "You just planted an #{name} tree. By watering it, you will get fruits to collect."
     @count += 1
-    puts @count
+    puts "You now have in total #{@count} trees."
+  end
+
+  def trees
+    puts "You have #{@count} trees."
   end
 
   def water
