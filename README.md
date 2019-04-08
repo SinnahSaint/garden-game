@@ -24,4 +24,6 @@ Commands you can use when running it:
   
 
 
-Tried to do a working gardening game from the blueprint, but can't sort it out yet the repeatedness.
+To run the game either clone it or download it, and then run the command
+
+ruby garden_game.rb
