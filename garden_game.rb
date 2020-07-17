@@ -1,54 +1,53 @@
 class Garden
-attr_accessor :name, :count, :water, :fruits
+  attr_reader :trees, :water, :fruits
 
-  def initialize 
-    @name = name
-    @count = 1
+  def initialize
+    @trees = 1
     @water = 0
     @fruits = 0
   end
 
-  def plant 
+  def plant
     puts "You just planted a tree. By watering it, you will get fruits to collect."
-    @count += 1
-    puts "You now have in total #{@count} trees."
+    @trees += 1
+    puts "You now have in total #{trees} trees."
   end
 
-  def trees
-    puts "You have #{@count} trees."
+  def count_trees
+    puts "You have #{trees} trees."
   end
 
-  def water
+  def add_water
     puts "You just watered your trees and maybe can collect some fruits!"
     @water += 1
   end
 
-  def fruits
-    if @water == 1
+  def count_fruit
+    if water == 1
       puts "You have 5 fruits."
       @fruits = 5
-    elsif @water == 2
+    elsif water == 2
       puts "You have 10 fruits."
       @fruits = 10 
-    elsif @water == 3
+    elsif water == 3
       puts "You have 15 fruits."
       @fruits = 15
-    elsif @water == 4
+    elsif water == 4
       puts "You have 20 fruits."
       @fruits = 20
-    elsif @water == 5
+    elsif water == 5
       puts "You have 30 fruits."
       @fruits = 30
-    elsif @water > 5 
+    elsif water > 5 
       @fruits = 50 + rand(50)
-      puts "You have #{@fruits} fruits."
+      puts "You have #{fruits} fruits."
     else puts "You don't have fruits to collect!"
       @fruits = 0
     end
   end
 
   def collect
-    puts "You collected #{@fruits} fruits."
+    puts "You collected #{fruits} fruits."
     @fruits = 0
     @water = 0
   end
