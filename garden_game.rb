@@ -23,35 +23,27 @@ class Garden
   end
 
   def count_fruit
-    if water == 1
-      puts "You have 5 fruits."
-      @fruits = 5
-    elsif water == 2
-      puts "You have 10 fruits."
-      @fruits = 10 
-    elsif water == 3
-      puts "You have 15 fruits."
-      @fruits = 15
-    elsif water == 4
-      puts "You have 20 fruits."
-      @fruits = 20
-    elsif water == 5
-      puts "You have 30 fruits."
-      @fruits = 30
-    elsif water > 5 
-      @fruits = 50 + rand(50)
+    grow_fruit
+    if @fruits == 0 
+      puts "You don't have fruits to collect!"
+    else 
       puts "You have #{fruits} fruits."
-    else puts "You don't have fruits to collect!"
-      @fruits = 0
     end
   end
-
+  
+  def grow_fruit
+    case(water)
+    when 1..4 then @fruits = water * 5
+    when 5    then @fruits = 30
+    else @fruits = 50 + rand(50)
+    end
+  end
+  
   def collect
     puts "You collected #{fruits} fruits."
     @fruits = 0
     @water = 0
   end
-
 end
 
 def welcome
