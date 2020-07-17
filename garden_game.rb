@@ -54,18 +54,25 @@ class Garden
 
 end
 
-puts "Hello and welcome to a gardening game!"
-puts "You can plant trees, water them so you can get fruits to collect."
-puts "The options you can choose from:\n
-1.Plant a tree
-2.Water the tree/trees
-3.See how many trees you have
-4.See how many fruits you have
-5.Collect your fruits"
-puts "Let's get started then!"
-puts "-"*30
+def welcome
+  puts <<~HEREDOC
+        Hello and welcome to a gardening game!
 
-puts "Let's plant a tree first. When you water your trees, you get fruits from them."
+        You can plant trees, water them so you can get fruits to collect.
+        The options you can choose from:
+
+          1.Plant a tree
+          2.Water the tree/trees
+          3.See how many trees you have
+          4.See how many fruits you have
+          5.Collect your fruits
+
+        Let's get started then!
+        #{"-" * 30}
+       You start with one tree. When you water your trees, you get fruits from them. 
+HEREDOC
+end
+
 
 def input 
   while true
