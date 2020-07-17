@@ -66,25 +66,24 @@ puts "Let's get started then!"
 puts "-"*30
 
 puts "Let's plant a tree first. When you water your trees, you get fruits from them."
-tree = Garden.new
 
+def input 
+  while true
+    puts "What would you like to do now? (Enter a number from 1 to 5 )"
+    answer = gets.chomp
 
-while true
-  puts
-  puts "What would you like to do now? (Enter a number from 1 to 5 )"
-  answer = gets.chomp!
-
-  if answer == "1"
-    tree.plant
-  elsif answer == "2"
-    tree.water
-  elsif answer == "3"
-    tree.trees
-  elsif answer == "4"
-    tree.fruits
-  elsif answer == "5"
-    tree.collect
-  else
-    puts "Please type one of the commands."
+    case(answer)
+    when "1" then @my_garden.plant
+    when "2" then @my_garden.add_water
+    when "3" then @my_garden.count_trees
+    when "4" then @my_garden.count_fruit
+    when "5" then @my_garden.collect
+    else
+      puts "Please type one of the commands."
+    end
   end
 end
+
+
+@my_garden = Garden.new
+
