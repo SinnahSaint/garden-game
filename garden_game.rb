@@ -92,5 +92,11 @@ def input
 end
 
 
+# # what actually runs the game
+
 @my_garden = Garden.new
+welcome
+input
+
+
 
